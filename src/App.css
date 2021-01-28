@@ -1,38 +1,346 @@
-.App {
+
+.MetricCard{
+  width:22.5%;
+  display:inline-block;
+  box-shadow: 0px 0px 1px rgb(54, 52, 52);
+  
+  padding:10px;
+  margin:5px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-header{
+  display:inline-block;
+  width:100%;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 0px;
+  padding:5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  box-shadow: 0px 0px 1px rgb(54, 52, 52);
+}
+.Completed{
+  color:rgb(55, 224, 21)
+}
+.Ongoing{
+  color:blue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Pending{
+  color:rgb(150, 150, 23);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.count{
+  font-size: 30px;
+}
+.secondLayer{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  font-size: 20px;
+  margin-top: 20px;
+  padding:10px;
+}
+.dashboard{
+  margin:20px;
+}
+.metric{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+  padding:10px;
+}
+.ActiveTrainer{
+  
+  box-shadow: 0 0 10px rgb(238, 205, 205);
+  padding:0px;
+  margin-right:15px;
+  text-align: center;
+  width:300px;
+}
+.Logout{
+   float: inline-end;
+   min-height: 5px;
+   width:5%;
+   text-align: center;
+    padding:5px;
+    border-radius: 10px;
+    border:1px solid black; 
+   display:inline-block;
+   background-color: rgb(5, 5, 5);
+   color:white;
+   margin-right: 15px;
+   
+}
+.menu{
+  min-height: 5px;
+  display:inline-block;
+  width:50%;
+}
+.logo{
+  display:inline-block;
+  width:20%;
+  min-height: 5px;
+}
+body{
+  overflow-x: hidden;
+}
+.value{
+  border-radius: 50%;
+    width: 80px;
+    height: 60px;
+    padding: 18px;
+    padding-top:30px;
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+
+    font: 32px Arial, sans-serif;
+  
+}
+.skillCard{
+  box-shadow: 0 0 10px rgb(238, 205, 205);
+  padding:0px;
+  margin-right:15px;
+  text-align: center;
+  width:300px;
 }
 
-.App-link {
-  color: #61dafb;
+.BarChart{
+
+  width:800px;
+  box-shadow: 0 0 10px rgb(238, 205, 205);
+  padding:0px;
+  
+  text-align: center;
+}
+.Training_info{
+  width:50%;
+  display:inline-block;
+}
+.metric-status{
+
+}
+.status{
+  display:inline-block;
+  background-color:blanchedalmond ;
+  float: right;
+  border-radius: 25px;
+  padding:10px;
+  font-weight: bold;
+}
+.trainingCard{
+  
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 1px rgb(54, 52, 52);
+  
+}
+.Training-heading{
+  padding:20px 0px 20px 0px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.Training_details{
+  width:100%;
+  display:inline-block;
+  margin-bottom: 10px;
+}
+.detail_block{
+  display: inline;
+  padding-right: 10px;
+  width:18%;
+}
+.skills{
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 25px;
+  margin-right: 10px;
+  padding:5px;
+  text-align: center;
+padding-left: 10px;
+padding-right: 10px;
+}
+.trainingName{
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.instituteName{
+  padding-bottom: 10px;
+}
+.heading{
+  text-align: left;
+  margin-top: 0px;
+  margin-left:0px;
+}
+.card{
+  box-shadow: 0px 0px 1px rgb(54, 52, 52);
+  margin-bottom: 15px;
+  padding:10px;
+}
+.entry{
+  display:inline-block;
+  width:290px;
+
+}
+.entry-header{
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+.entry-input{
+  height:30px;
+  width:250px;
+  border-radius: 4px;
+}
+.TrainingList{
+  margin:20px;
+  margin-top: 0px;
+}
+.NewTrainingButton{
+  text-align: right;
+  
+  padding:10px;
+  
+}
+.TrainingButton{
+  background-color: rgb(104, 104, 248);
+  color:white;
+  font-weight:initial;
+  display:inline-block;
+  padding:10px;
+  border-radius: 4px;
+}
+.create-entry{
+  display:inline-block;
+  width:49%;
+  margin:5px;
+}
+.create-entry-input{
+  height:30px;
+  width:100%;
+  border-radius: 4px;
+}
+a{
+  text-decoration: none;
+  color:none;
+}
+.Login{
+  margin-left:20%;
+  margin-right:20%;
+  margin-top:10%;
+  border-radius: 4px;
+  box-shadow: 0px 0px 1px rgb(54, 52, 52);
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 10px;
+}
+.TrainingAcademyText{
+  padding-top:50%;
+  
+  text-align: center;
+  
+  color:white;
+  font-size: 30px;
+}
+.login-text{
+  padding-top:10%;
+  text-align: center;
+}
+.part1{
+  display:inline-block;
+  width:50%;
+  background-color: white;
+  
+  margin:40px;
+  paddig-top:0px;
+}
+.part2{
+  display: inline-block;
+  width:40%;
+  
+  min-height: 450px;
+  text-align: center;
+  background-color: rgb(206, 115, 176);
+
+}
+.inputBox{
+  width:100%;
+  height:30px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+.loginButton{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top:10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  color:white;
+  margin-top:30px;
+  background-color: rgb(206, 115, 176);
+  border-radius: 15px;
+}
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.down{
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.NoneNone{
+  background-color: rgb(129, 127, 129);
+}
+.DeliveryDelivery{
+  background-color:rgb(129, 127, 129);
+}
+.SupportSupport{
+  background-color: rgb(129, 127, 129);
+}
+.trainerCards{
+  display: inline-block;
+  width:60%;
+}
+.row-col{
+  margin:10px;
+  display:inline-block;
+}
+.type{
+  padding:5px 10px 5px 10px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 1px rgb(54, 52, 52);
+}
+.type:hover{
+  cursor: pointer;
+}
+.trainer-row{
+  margin-bottom: 10px;
+  box-shadow:  0px 0px 1px rgb(54, 52, 52);
+  width:100%;
+  border-radius: 2px;
+}
+td{
+  width:50%;
+  padding:10px;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.AddTrainer{
+  margin:10px;
+  width:50%;
+  border-radius: 5px;
+  padding:5px;
 }

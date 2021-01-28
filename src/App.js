@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
+import Dashboard from './Dashboard'
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+import TrainingList from './TrainingList'
+import Create from './Create'
+import Login from './Login'
+import {connect} from 'react-redux'
+import {initiate} from './actions'
+export class App extends Component {
+  componentDidMount(){
+    fetch("https://user-problem-worksheet-india.s3-ap-south-1.amazonaws.com/Json/capstoneProject/trainings.json")
+    .then(res=> res.json())
+    .then(result =>{
+        
+        this.props.initiate(result)
+    }
+    )
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  }
+  render() {
+    return (
+      <div>
+        <Router>
+          <Switch>
+         
+          <Route exact path="/"  component={Login} />
+          <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/training" component={TrainingList} />
+          <Route exact path="/create" component={Create} />
+        
+          </Switch>
+         
+        </Router>
+      </div>
+    )
+  }
 }
-
-export default App;
+const mapDispatchToProps=dispatch=>{
+  return{
+  initiate:data=>{dispatch(initiate(data))}
+  }
+}
+export default connect('',mapDispatchToProps)(App)
